@@ -1,0 +1,57 @@
+.oil-card {
+    background-color: #f7f3e9; /* Light cream background for a natural feel */
+    border: 2px solid #8c7b75; /* Soft brown border */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .oil-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    color: #5a7d4a; /* Earthy green for the main heading */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #4b3621; /* Dark brown text for an earthy look */
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  h3 {
+    color: #3f5d35; /* Deeper green for subheadings */
+    margin-top: 20px;
+    font-size: 1.4em;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    background-color: #e5d1b8; /* Soft tan background for list items */
+    color: #4e432b; /* Brown text for the benefits */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  ul li::before {
+    content: '✔';
+    color: #7b8d45; /* Muted green checkmark */
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,53 @@
+[
+    {
+      "name": "Rosemary",
+      "image": "/images/rosemary-oil.jpg",
+      "description": "Rosemary oil is known for its stimulating properties and is often used for mental clarity.",
+      "benefits": [
+        "Improves concentration",
+        "Stimulates hair growth",
+        "Relieves muscle pain"
+      ]
+    },
+    {
+      "name": "Lemon",
+      "image": "/images/lemon-oil.jpg",
+      "description": "Lemon oil has uplifting properties and is often used to boost mood and energy.",
+      "benefits": [
+        "Enhances mood",
+        "Supports digestion",
+        "Promotes clear skin"
+      ]
+    },
+    {
+      "name": "Ylang Ylang",
+      "image": "/images/ylang-ylang-oil.jpg",
+      "description": "Ylang Ylang oil is known for its ability to calm the mind and promote relaxation.",
+      "benefits": [
+        "Relieves stress and anxiety",
+        "Promotes relaxation and emotional balance",
+        "Balances skin oil production"
+      ]
+    },
+    {
+      "name": "Clary Sage",
+      "image": "/images/clary-sage-oil.jpg",
+      "description": "Clary Sage oil is known for its calming effects and is often used in aromatherapy.",
+      "benefits": [
+        "Helps alleviate menstrual discomfort",
+        "Promotes relaxation",
+        "Balances hormones"
+      ]
+    },
+    {
+      "name": "Chamomile",
+      "image": "/images/chamomile-oil.jpg",
+      "description": "Chamomile oil is known for its soothing properties and is often used for sleep and relaxation.",
+      "benefits": [
+        "Promotes restful sleep",
+        "Calms the mind",
+        "Soothes skin irritations"
+      ]
+    }
+  ]
+  
