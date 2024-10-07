@@ -11,6 +11,7 @@ const essentialOils = [
 
 const ProductDetails = () => {
   const { name } = useParams(); // Get the name from the URL
+  console.log(name)
   const oil = essentialOils.find(o => o.name.toLowerCase() === name.toLowerCase()); // Find the oil by name
 
   if (!oil) return <p>Product not found.</p>;

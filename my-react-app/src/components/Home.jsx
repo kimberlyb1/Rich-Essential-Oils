@@ -1,6 +1,6 @@
 // src/components/Home.jsx
 import React from 'react';
-import './Home.css'; // Import the CSS styles
+import './H'; // Import the CSS styles
 
 const Home = () => {
   return (
