@@ -1,15 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Sidebar.css'; // Optional: if you want to style your sidebar
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css"; // Ensure this file exists
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <h2>Essential Oils</h2>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/oils">Oils</Link></li>
-        {/* Add more links as necessary */}
+        <li><Link to="/rosemary">Rosemary</Link></li>
+        <li><Link to="/lemon">Lemon</Link></li>
+        <li><Link to="/ylang-ylang">Ylang Ylang</Link></li>
+        <li><Link to="/clary-sage">Clary Sage</Link></li>
+        <li><Link to="/chamomile">Chamomile</Link></li>
       </ul>
     </aside>
   );
