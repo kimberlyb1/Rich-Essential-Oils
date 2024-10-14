@@ -1,0 +1,33 @@
+/* src/Styles/Sidebar.css */
+
+.sidebar {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 1rem;
+    border-right: 2px solid #8bc34a; /* Darker green border */
+    width: 200px; /* Fixed width for sidebar */
+    position: fixed; /* Fix the sidebar on the left */
+    height: 100%; /* Full height */
+  }
+  
+  .sidebar h2 {
+    color: #4caf50; /* Darker green text */
+  }
+  
+  .sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 1rem 0; /* Spacing between links */
+  }
+  
+  .sidebar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #388e3c; /* Dark green link color */
+  }
+  
+  .sidebar a:hover {
+    color: #1b5e20; /* Darker green on hover */
+  }
+  

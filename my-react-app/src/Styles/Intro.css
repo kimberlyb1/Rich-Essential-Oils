@@ -1,0 +1,46 @@
+/* Intro.css */
+
+/* General styling for the intro section */
+.intro {
+    background-color: #e0f7da; /* Light green background to resemble nature */
+    color: #3e3d32; /* Dark brown text */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .intro h2 {
+    font-size: 2rem;
+    color: #2e7d32; /* Deep green for headings */
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph styling */
+  .intro p {
+    font-size: 1.2rem;
+    color: #5d4037; /* Brown for the paragraph text */
+    line-height: 1.6;
+  }
+  
+  /* Button styling */
+  .intro button {
+    background-color: #388e3c; /* Green button for action */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .intro button:hover {
+    background-color: #2e7d32; /* Darker green on hover */
+  }
+  
+

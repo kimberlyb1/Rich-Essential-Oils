@@ -1,10 +1,11 @@
 import React from 'react';
-import './Lemon.css';
+import lemonImage from '../images/lemon.jpg'; // Correct image import
+import '../styles/Lemon.css'; // Correct CSS import
 
 const Lemon = () => {
   return (
     <div className="oil-card">
-      <img src="/images/lemon-oil.jpg" alt="Lemon Essential Oil" className="oil-image" />
+      <img src={lemonImage} alt="Lemon Essential Oil" className="oil-image" />
       <h2>Lemon Essential Oil</h2>
       <p>
         Lemon oil is a vibrant, citrusy essential oil that energizes the mind and body. 
@@ -23,3 +24,5 @@ const Lemon = () => {
 };
 
 export default Lemon;
+
+

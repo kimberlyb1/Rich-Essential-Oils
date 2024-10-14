@@ -1,0 +1,21 @@
+.home {
+  text-align: center;
+  padding: 50px;
+  height: 100vh; /* Make it cover the whole viewport height */
+  background-image: url('../images/image.png'); /* Ensure the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #A67B5B; /* Earthy brown */
+}
+
+.home h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2E4A2C; /* Earthy green */
+}
+
+.home p {
+  font-size: 1.5em;
+  color: #2E4A2C; /* Earthy green */
+}

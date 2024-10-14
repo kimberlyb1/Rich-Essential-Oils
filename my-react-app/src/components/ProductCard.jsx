@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+import '../Styles/ProductCard.css';
 const ProductCard = ({ oil }) => {
   return (
     <Link to={`/product/${oil.name.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -19,4 +19,3 @@ const ProductCard = ({ oil }) => {
   );
 };
 export default ProductCard;
-

@@ -14,18 +14,15 @@ code {
 
 .app {
   text-align: center;
-  ;
 }
-.header { background-image: url('images/image.png');
+
+.header, .app-header { 
+  background-image: url('./images/image.png');  /* Adjust path based on image location */
   background-repeat: no-repeat;
   background-size: cover;
-
 }
-.app-header { background-image: url('images/image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  
+.app-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;

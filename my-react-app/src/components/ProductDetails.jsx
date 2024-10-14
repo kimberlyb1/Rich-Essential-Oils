@@ -1,7 +1,7 @@
 // src/components/ProductDetails.jsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './ProductDetails.css'; // Import the CSS styles
+import '../Styles/ProductDetails.css'; // Import the CSS styles
 
 // Sample data for essential oils (You might want to move this to a separate file)
 const essentialOils = [

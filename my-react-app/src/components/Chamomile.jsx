@@ -1,10 +1,11 @@
 import React from 'react';
-
+import chamomileImage from '../images/Chamomile.png'; // Import the image
+import '../styles/Chamomile.css';
 
 const Chamomile = () => {
   return (
     <div className="oil-card">
-      <img src="/images/Chamomile.png" alt="Chamomile Essential Oil" className="oil-image" />
+      <img src={chamomileImage} alt="Chamomile Essential Oil" className="oil-image" />
       <h2>Chamomile Essential Oil</h2>
       <p>
         Chamomile oil is celebrated for its calming and soothing effects. It helps reduce 

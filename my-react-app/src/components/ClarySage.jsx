@@ -1,10 +1,11 @@
-import React from 'react';
-import './ClarySage.css'; // Import the specific CSS file
+mport React from 'react';
+import clarySageImage from '../images/Clary-Sage.jpg'; // Import the image
+import '../styles/ClarySage.css'; // Correct CSS import
 
 const ClarySage = () => {
   return (
     <div className="oil-card">
-      <img src="/images/clary-sage-oil.jpg" alt="Clary Sage Essential Oil" className="oil-image" />
+      <img src={clarySageImage} alt="Clary Sage Essential Oil" className="oil-image" />
       <h2>Clary Sage Essential Oil</h2>
       <p>
         Clary Sage oil is known for its calming effects and is often used in aromatherapy.
@@ -20,3 +21,4 @@ const ClarySage = () => {
 };
 
 export default ClarySage;
+

@@ -1,10 +1,11 @@
 import React from 'react';
-import './YlangYlang.css';
+import ylangYlangImage from '../images/YlangYlang.webp'; // Import the image
+import '../styles/YlangYlang.css'; // Correct CSS import
 
 const YlangYlang = () => {
     return (
         <div className="oil-card">
-            <img src="/images/ylang-ylang-oil.jpg" alt="Ylang Ylang Essential Oil" className="oil-image" />
+            <img src={ylangYlangImage} alt="Ylang Ylang Essential Oil" className="oil-image" />
             <h2>Ylang Ylang Essential Oil</h2>
             <p>
                 Ylang Ylang oil is known for its ability to calm the mind and promote relaxation.
