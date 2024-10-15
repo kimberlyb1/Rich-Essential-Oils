@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Chamomile",
+      "description": "Chamomile essential oil is known for its calming properties and is often used to promote relaxation and sleep.",
+      "benefits": [
+        "Reduces anxiety",
+        "Improves sleep",
+        "Soothes skin irritation"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Clary Sage",
+      "description": "Clary Sage essential oil is beneficial for balancing hormones and reducing stress.",
+      "benefits": [
+        "Balances hormones",
+        "Improves mood",
+        "Eases menstrual discomfort"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Lemon",
+      "description": "Lemon essential oil is known for its uplifting and refreshing properties, commonly used for detoxification.",
+      "benefits": [
+        "Detoxifies the body",
+        "Enhances mood",
+        "Boosts immunity"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Rosemary",
+      "description": "Rosemary essential oil helps improve concentration, memory, and is often used for mental clarity.",
+      "benefits": [
+        "Boosts memory",
+        "Reduces stress",
+        "Promotes hair growth"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Ylang Ylang",
+      "description": "Ylang Ylang oil is used for its sweet floral scent and is known to promote relaxation and emotional balance.",
+      "benefits": [
+        "Calms mind",
+        "Reduces stress",
+        "Enhances mood"
+      ]
+    }
+  ]
+  
