@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Sidebar.css"; // Ensure this file exists
+import "../Styles/Sidebar.css"; // Ensure this file exists
 
 const Sidebar = () => {
   return (
