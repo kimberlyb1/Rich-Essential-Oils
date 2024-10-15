@@ -253,7 +253,6 @@
 
 // export default App;
 
-
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Intro from './components/Intro';
@@ -261,13 +260,14 @@ import Home from './components/Home';
 import OilList from './components/OilList';
 import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
-import Sidebar from './components/Sidebar'; // Added Sidebar
+import Sidebar from './components/Sidebar'; // Sidebar component
+import Chamomile from './components/Chamomile';
+import Rosemary from './components/Rosemary';
+import Lemon from './components/Lemon';
+import YlangYlang from './components/YlangYlang';
+import ClarySage from './components/ClarySage';
 import './Styles/App.css';
-import './Styles/Intro.css';
-import './Styles/Home.css';
-import './Styles/ProductCard.css';
-import './Styles/ProductDetails.css';
-import './Styles/Sidebar.css'; // Import Sidebar CSS
+import './Styles/Sidebar.css';
 
 const App = () => {
   const [oils, setOils] = useState([]);
@@ -308,40 +308,54 @@ const App = () => {
           <p>Discover the Benefits of Natural Essential Oils</p>
         </header>
 
-        <Sidebar /> {/* Include the Sidebar here */}
+        <Sidebar /> {/* Sidebar component */}
 
         <main className="oil-container">
           <Switch>
             <Route path="/" exact>
-              <section>
-                <Intro />
-              </section>
-              <section id="home">
-                <Home />
-              </section>
+              <Intro />
+              <Home />
             </Route>
 
             <Route path="/oils">
-              <section id="oils">
-                {loading ? (
-                  <p>Loading oils...</p>
-                ) : (
-                  <OilList oils={oils} onClick={handleProductClick} />
-                )}
-              </section>
-
-              {selectedProduct ? (
-                <section>
-                  <ProductDetails oil={selectedProduct} onBackClick={handleBackClick} />
-                </section>
+              {loading ? (
+                <p>Loading oils...</p>
               ) : (
-                <section>
-                  {oils.map((oil, index) => (
-                    <ProductCard key={index} oil={oil} onClick={() => handleProductClick(oil)} />
-                  ))}
-                </section>
+                <OilList oils={oils} onClick={handleProductClick} />
               )}
             </Route>
+
+            <Route path="/rosemary">
+              <Rosemary />
+            </Route>
+
+            <Route path="/lemon">
+              <Lemon />
+            </Route>
+
+            <Route path="/ylang-ylang">
+              <YlangYlang />
+            </Route>
+
+            <Route path="/clary-sage">
+              <ClarySage />
+            </Route>
+
+            <Route path="/chamomile">
+              <Chamomile />
+            </Route>
+
+            {selectedProduct ? (
+              <Route path="/product-details">
+                <ProductDetails oil={selectedProduct} onBackClick={handleBackClick} />
+              </Route>
+            ) : (
+              <Route path="/product-list">
+                {oils.map((oil, index) => (
+                  <ProductCard key={index} oil={oil} onClick={() => handleProductClick(oil)} />
+                ))}
+              </Route>
+            )}
           </Switch>
         </main>
 
