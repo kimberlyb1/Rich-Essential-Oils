@@ -1,4 +1,5 @@
 .oil-card {
+    height: 700px;
     background-color: #8F9779; /* Earthy green */
     color: #A67B5B; /* Earthy brown */
     padding: 20px;
@@ -41,6 +42,6 @@
   
   .oil-card li {
     font-size: 0.9em;
-    color: #A67B5B; /* Earthy brown */
+    color: black /* Earthy brown */
   }
   

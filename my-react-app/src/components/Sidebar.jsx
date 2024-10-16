@@ -5,7 +5,7 @@ import "../Styles/Sidebar.css"; // Ensure this file exists
 const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <ul>
+      <ul className='NavBar'>
         <li><Link to="/rosemary">Rosemary</Link></li>
         <li><Link to="/lemon">Lemon</Link></li>
         <li><Link to="/ylang-ylang">Ylang Ylang</Link></li>

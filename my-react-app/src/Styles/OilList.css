@@ -6,10 +6,20 @@
     padding: 20px;
     background-color: #E6E8E6; /* Light, earthy background */
   }
+  .OilBar {
+    display: flex;          /* Enables Flexbox layout */
+    flex-direction: row;     /* Ensures components are in a row */
+    justify-content: space-between; /* Optional: adds space between items */
+    align-items: center;     /* Align items vertically in the center */
+    gap: 20px;               /* Optional: adds space between items */
+    padding: 20px;           /* Optional: add some padding to the section */
+  }
+    
+  
   
   .oil-item {
     background-color: #8F9779; /* Earthy green */
-    color: #A67B5B; /* Earthy brown */
+    color: black; /* Earthy brown */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -25,7 +35,7 @@
   
   .oil-image {
     max-width: 100%;
-    height: auto;
+    height: 170px;
     border-radius: 8px;
     margin-bottom: 10px;
     border: 2px solid #2E4A2C; /* Earthy green border */
@@ -50,6 +60,6 @@
   
   .oil-item li {
     font-size: 0.9em;
-    color: #A67B5B; /* Earthy brown */
+    color: black; /* Earthy brown */
   }
   

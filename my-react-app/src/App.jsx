@@ -253,118 +253,110 @@
 
 // export default App;
 
+
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Intro from './components/Intro';
 import Home from './components/Home';
 import OilList from './components/OilList';
 import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
-import Sidebar from './components/Sidebar'; // Sidebar component
 import Chamomile from './components/Chamomile';
 import Rosemary from './components/Rosemary';
 import Lemon from './components/Lemon';
 import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
 import './Styles/App.css';
-import './Styles/Sidebar.css';
+import './Styles/OilList.css';
 
 const App = () => {
-  const [oils, setOils] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+    const [oils, setOils] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch('/Rich.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setOils(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching oils:', error);
-        setLoading(false);
-      });
-  }, []);
+    // Fetch oils data when the component mounts
+    useEffect(() => {
+        fetch('/Rich.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setOils(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching oils:', error);
+                setLoading(false);
+            });
+    }, []);
 
-  const handleProductClick = (oil) => {
-    setSelectedProduct(oil);
-  };
+    return (
+        <Router>
+            <div className="app">
+                <header className="app-header">
+                    <h1>Rich Essential Oils</h1>
+                    <p>Discover the Benefits of Natural Essential Oils</p>
+                
+                    
+                </header>
+                <div>
+                <section className='OilBar'>
+                        <Chamomile />
+                        <Rosemary />
+                        <Lemon />
+                        <YlangYlang />
+                        <ClarySage />
+                        {/* {oils.map((oil, index) => (
+                            <ProductCard key={index} oil={oil} onClick={() => handleProductClick(oil)} />
+                        ))} */}
+                    </section>
+                </div>
 
-  const handleBackClick = () => {
-    setSelectedProduct(null);
-  };
 
-  return (
-    <Router>
-      <div className="app">
-        <header className="app-header">
-          <h1>Rich Essential Oils</h1>
-          <p>Discover the Benefits of Natural Essential Oils</p>
-        </header>
 
-        <Sidebar /> {/* Sidebar component */}
+                <main className="oil-container">
+                    <Routes>
+                        <Route path="/" element={
+                            <>
+                                <Intro />
+                                <Home />
+                            </>
+                        } />
 
-        <main className="oil-container">
-          <Switch>
-            <Route path="/" exact>
-              <Intro />
-              <Home />
-            </Route>
+                        <Route path="/oils" element={
+                            loading ? (
+                                <p>Loading oils...</p>
+                            ) : (
+                                <OilList oils={oils} onClick={(oil) => navigate(`/product-details/${oil.id}`)} />
+                            )
+                        } />
 
-            <Route path="/oils">
-              {loading ? (
-                <p>Loading oils...</p>
-              ) : (
-                <OilList oils={oils} onClick={handleProductClick} />
-              )}
-            </Route>
+                        <Route path="/rosemary" element={<Rosemary />} />
+                        <Route path="/lemon" element={<Lemon />} />
+                        <Route path="/ylang-ylang" element={<YlangYlang />} />
+                        <Route path="/clary-sage" element={<ClarySage />} />
+                        <Route path="/chamomile" element={<Chamomile />} />
 
-            <Route path="/rosemary">
-              <Rosemary />
-            </Route>
+                        {/* Dynamic route for product details */}
+                        <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
 
-            <Route path="/lemon">
-              <Lemon />
-            </Route>
+                        <Route path="/product-list" element={
+                            oils.map((oil, index) => (
+                                <ProductCard key={index} oil={oil} onClick={() => navigate(`/product-details/${oil.id}`)} />
+                            ))
+                        } />
+                    </Routes>
+                </main>
 
-            <Route path="/ylang-ylang">
-              <YlangYlang />
-            </Route>
-
-            <Route path="/clary-sage">
-              <ClarySage />
-            </Route>
-
-            <Route path="/chamomile">
-              <Chamomile />
-            </Route>
-
-            {selectedProduct ? (
-              <Route path="/product-details">
-                <ProductDetails oil={selectedProduct} onBackClick={handleBackClick} />
-              </Route>
-            ) : (
-              <Route path="/product-list">
-                {oils.map((oil, index) => (
-                  <ProductCard key={index} oil={oil} onClick={() => handleProductClick(oil)} />
-                ))}
-              </Route>
-            )}
-          </Switch>
-        </main>
-
-        <footer className="app-footer">
-          <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
-        </footer>
-      </div>
-    </Router>
-  );
+                <footer className="app-footer">
+                    <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
+                </footer>
+            </div>
+        </Router>
+    );
 };
 
 export default App;
+

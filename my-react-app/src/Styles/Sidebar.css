@@ -4,9 +4,22 @@
     background-color: #e8f5e9; /* Light green background */
     padding: 1rem;
     border-right: 2px solid #8bc34a; /* Darker green border */
-    width: 200px; /* Fixed width for sidebar */
-    position: fixed; /* Fix the sidebar on the left */
+    width: auto; /* Fixed width for sidebar */
+    display: flex;
     height: 100%; /* Full height */
+  }
+  .NavBar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: row; /* Ensures items are in a row */
+  }
+  .NavBar li {
+    margin-right: 10px; /* Adjust spacing between items */
+  }
+  .NavBar li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
   }
   
   .sidebar h2 {
