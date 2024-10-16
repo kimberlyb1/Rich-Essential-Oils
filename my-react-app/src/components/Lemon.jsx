@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import lemonImage from '../images/Lemon.png'; // Correct path for image
+import lemonImage from '../images/Lemon.jpg'; // Correct path for image
 import '../styles/Lemon.css'; // Correct path for CSS
 
 const Lemon = () => {
