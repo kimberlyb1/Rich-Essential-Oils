@@ -1,49 +1,19 @@
-.home {
+home {
   text-align: center;
   padding: 50px;
-  height: 100vh; /* Full viewport height */
-  background-image: url('../images/image.png'); /* Ensure the correct image path */
+  background-image: url('../images/image.png'); /* Ensure the correct path */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps the background static while scrolling */
-  color: #A67B5B; /* Earthy brown for general text */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Adds spacing between elements */
+  color: #A67B5B; /* Earthy brown */
 }
 
-/* Heading styling with an earthy green color */
 .home h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #2E4A2C; /* Earthy deep green */
-  font-family: 'Georgia', serif; /* Elegant serif font for a natural vibe */
+  color: #2E4A2C; /* Earthy green */
 }
 
-/* Paragraph styling to match the earthy theme */
 .home p {
   font-size: 1.5em;
-  color: #2E4A2C; /* Earthy green for readability */
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-/* Optional: Add a subtle shadow for better text readability on the background */
-.home h2,
-.home p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Ensure mobile responsiveness */
-@media (max-width: 768px) {
-  .home h2 {
-    font-size: 2em;
-  }
-
-  .home p {
-    font-size: 1.2em;
-  }
+  color: #2E4A2C; /* Earthy green */
 }
