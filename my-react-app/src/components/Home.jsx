@@ -1,21 +1,11 @@
 import React from 'react';
-import '../styles/Home.css'; // Ensure your CSS file path is correct
-import signatureImage from '../images/signature.png'; // Optional: If using an image
+import '../Styles/Home.css'; // Correct path to CSS styles
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <h1>Welcome to Rich Essential Oils</h1>
-      <p>Explore the beauty of nature's finest oils with us.</p>
-
-      {/* Signature Section */}
-      <div className="signature">
-        <p>With love,</p>
-
-        {/* Choose between text or image signature */}
-        <p className="signature-text">Kimberly</p>
-        {/* <img src={signatureImage} alt="Signature" className="signature-image" /> */}
-      </div>
+    <div className="home">
+      <h2>Welcome to Rich Essential Oils</h2>
+      <p>Explore the world of essential oils and their benefits.</p>
     </div>
   );
 };
