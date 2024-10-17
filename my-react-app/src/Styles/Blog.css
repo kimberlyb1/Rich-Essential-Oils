@@ -1,0 +1,26 @@
+.blog {
+    padding: 40px;
+    background-color: #E5E4E2; /* Light stone color */
+  }
+  
+  .blog h2 {
+    text-align: center;
+    color: #2E4A2C;
+  }
+  
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .blog-card {
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  

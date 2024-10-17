@@ -253,9 +253,10 @@
 
 // export default App;
 
-
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 import Intro from './components/Intro';
 import Home from './components/Home';
 import OilList from './components/OilList';
@@ -266,12 +267,16 @@ import Rosemary from './components/Rosemary';
 import Lemon from './components/Lemon';
 import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
+import Navbar from './components/Navbar';
+import SearchBar from './components/SearchBar';
+import FadingImage from './components/FadingImage'; // Assuming this is a component you've created
 import './Styles/App.css';
 import './Styles/OilList.css';
 
-const App = () => {
+const AppWithRouter = () => {
     const [oils, setOils] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     // Fetch oils data when the component mounts
     useEffect(() => {
@@ -292,39 +297,26 @@ const App = () => {
             });
     }, []);
 
+    // Initialize AOS for animations
+    useEffect(() => {
+        AOS.init({ duration: 1200 });
+    }, []);
+
     return (
-        <Router>
-            <div className="app">
+        <div className="App">
+            <Router>
                 <header className="app-header">
                     <h1>Rich Essential Oils</h1>
                     <p>Discover the Benefits of Natural Essential Oils</p>
-                
-                    
+                    <Navbar />
+                    <SearchBar />
+                    <FadingImage images={['image1.jpg', 'image2.jpg', 'image3.jpg']} />
                 </header>
-                <div>
-                <section className='OilBar'>
-                        <Chamomile />
-                        <Rosemary />
-                        <Lemon />
-                        <YlangYlang />
-                        <ClarySage />
-                        {/* {oils.map((oil, index) => (
-                            <ProductCard key={index} oil={oil} onClick={() => handleProductClick(oil)} />
-                        ))} */}
-                    </section>
-                </div>
-
-
-
-                <main className="oil-container">
+                
+                <main>
                     <Routes>
-                        <Route path="/" element={
-                            <>
-                                <Intro />
-                                <Home />
-                            </>
-                        } />
-
+                        <Route path="/" element={<Intro />} />
+                        <Route path="/home" element={<Home />} />
                         <Route path="/oils" element={
                             loading ? (
                                 <p>Loading oils...</p>
@@ -332,31 +324,21 @@ const App = () => {
                                 <OilList oils={oils} onClick={(oil) => navigate(`/product-details/${oil.id}`)} />
                             )
                         } />
-
                         <Route path="/rosemary" element={<Rosemary />} />
                         <Route path="/lemon" element={<Lemon />} />
                         <Route path="/ylang-ylang" element={<YlangYlang />} />
                         <Route path="/clary-sage" element={<ClarySage />} />
                         <Route path="/chamomile" element={<Chamomile />} />
-
-                        {/* Dynamic route for product details */}
                         <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
-
-                        <Route path="/product-list" element={
-                            oils.map((oil, index) => (
-                                <ProductCard key={index} oil={oil} onClick={() => navigate(`/product-details/${oil.id}`)} />
-                            ))
-                        } />
                     </Routes>
                 </main>
-
+                
                 <footer className="app-footer">
                     <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
                 </footer>
-            </div>
-        </Router>
+            </Router>
+        </div>
     );
 };
 
-export default App;
-
+export default AppWithRouter;

@@ -1,3 +1,4 @@
+/* General Styles */
 body, html {
   width: 100%;
   margin: 0;
@@ -8,14 +9,14 @@ body, html {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .app {
   text-align: center;
 }
 
+/* Header Styles */
 .header, .app-header { 
   background-image: url('./images/image.png');  /* Adjust path based on image location */
   background-repeat: no-repeat;
@@ -37,10 +38,12 @@ code {
   margin: 0;
 }
 
+/* Main Container Styles */
 .oil-container {
   padding: 20px;
 }
 
+/* Footer Styles */
 .app-footer {
   background-color: #282c34;
   color: white;
@@ -48,4 +51,24 @@ code {
   width: 100%;
   bottom: 0;
   text-align: center;
+}
+
+/* Testimonials and Blog Styles */
+.testimonials-list, 
+.blog-list {
+  display: flex; /* Added to enable flex behavior */
+  flex-direction: row;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .testimonials-list, 
+  .blog-list {
+    flex-direction: column;
+  }
+
+  .blog-card, 
+  .testimonial {
+    width: 90%; /* Ensures cards take up more width on smaller screens */
+  }
 }

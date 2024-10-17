@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #2E4A2C; /* Earthy green color */
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .navbar a:hover {
+    background-color: #A67B5B; /* Lighter brown on hover */
+  }
+  
