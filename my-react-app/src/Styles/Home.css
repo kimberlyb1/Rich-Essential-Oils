@@ -43,6 +43,10 @@ footer {
   opacity: 0.8; /* Slight transparency for subtle effect */
 }
 
+.carousel-container {
+  margin: 20px 0;
+}
+
 @media (max-width: 768px) {
   /* Adjust layout for smaller screens */
   .home header h1 {
