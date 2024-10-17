@@ -9,6 +9,41 @@ import LemonImage from '../images/Lemon.png';
 import YlangYlangImage from '../images/YlangYlang.png';
 import ClarySageImage from '../images/ClarySage.png';
 
+// Oil data array
+const oils = [
+  {
+    name: 'Chamomile',
+    description: 'Calming and soothing',
+    image: ChamomileImage,
+    benefits: ['Reduces anxiety', 'Promotes sleep', 'Soothes skin irritation']
+  },
+  {
+    name: 'Rosemary',
+    description: 'Enhances memory and focus',
+    image: RosemaryImage,
+    benefits: ['Improves concentration', 'Reduces stress', 'Supports digestion']
+  },
+  {
+    name: 'Lemon',
+    description: 'Cleansing and refreshing',
+    image: LemonImage,
+    benefits: ['Boosts mood', 'Improves digestion', 'Detoxifies body']
+  },
+  {
+    name: 'Ylang Ylang',
+    description: 'Boosts confidence',
+    image: YlangYlangImage,
+    benefits: ['Reduces stress', 'Promotes relaxation', 'Enhances mood']
+  },
+  {
+    name: 'Clary Sage',
+    description: 'Promotes relaxation',
+    image: ClarySageImage,
+    benefits: ['Eases menstrual discomfort', 'Reduces anxiety', 'Enhances sleep']
+  },
+];
+
+// Main Home component
 const Home = () => {
   return (
     <div 
@@ -17,7 +52,7 @@ const Home = () => {
     >
       <header>
         <h1 className="main-title">Rich Essential Oils</h1>
-        <p className="subtitle">Discover the Benefits of Natural Essential Oils</p>
+        <p className="typing">Discover the Benefits of Natural Essential Oils</p>
       </header>
 
       <div className="welcome">
@@ -27,26 +62,12 @@ const Home = () => {
 
       <div className="carousel-container" data-aos="fade-in">
         <Carousel infiniteLoop autoPlay interval={3000} showThumbs={false}>
-          <div>
-            <img src={ChamomileImage} alt="Chamomile" />
-            <p className="legend">Chamomile Essential Oil</p>
-          </div>
-          <div>
-            <img src={RosemaryImage} alt="Rosemary" />
-            <p className="legend">Rosemary Essential Oil</p>
-          </div>
-          <div>
-            <img src={LemonImage} alt="Lemon" />
-            <p className="legend">Lemon Essential Oil</p>
-          </div>
-          <div>
-            <img src={YlangYlangImage} alt="Ylang Ylang" />
-            <p className="legend">Ylang Ylang Essential Oil</p>
-          </div>
-          <div>
-            <img src={ClarySageImage} alt="Clary Sage" />
-            <p className="legend">Clary Sage Essential Oil</p>
-          </div>
+          {oils.map((oil, index) => (
+            <div key={index}>
+              <img src={oil.image} alt={`${oil.name} oil`} />
+              <p className="legend">{oil.name} Essential Oil</p>
+            </div>
+          ))}
         </Carousel>
       </div>
 

@@ -1,19 +1,12 @@
+// src/components/OilList.jsx
 import React from 'react';
+import OilCard from './OilCard'; // Assuming you have an OilCard component for individual oils
 
 const OilList = ({ oils }) => {
   return (
     <div className="oil-list">
       {oils.map((oil, index) => (
-        <div key={index} className="oil-item">
-          <img src={oil.image} alt={`${oil.name} oil`} className="oil-image"/>
-          <h3>{oil.name}</h3>
-          <p>{oil.description}</p>
-          <ul>
-            {oil.benefits.map((benefit, idx) => (
-              <li key={idx}>{benefit}</li>
-            ))}
-          </ul>
-        </div>
+        <OilCard key={index} oil={oil} />
       ))}
     </div>
   );

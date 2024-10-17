@@ -1,8 +1,8 @@
 /* src/styles/Home.css */
 .home {
   height: 100vh; /* Full viewport height */
-  background-image: url('../images/image.png'); /* Ensure correct path */
-  background-size: cover;
+  background-image: url('../images/nature.png'); /* Ensure correct path to nature image */
+  background-size: cover;     
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -12,6 +12,10 @@
   text-align: center;
   color: #2E4A2C; /* Earthy green */
   padding: 20px;
+}
+
+.home header {
+  margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .home header h1 {
@@ -26,7 +30,27 @@
   font-style: italic; /* Add a softer feel */
 }
 
-.welcome p, .signature p {
+.typing {
+  font-size: 2em;
+  color: #2E4A2C; /* Earthy Green */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #A67B5B;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink-cursor 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+  50% { border-color: transparent; }
+}
+
+.welcome p,
+.signature p {
   margin: 10px 0;
   font-size: 1.2em;
 }
@@ -53,7 +77,9 @@ footer {
     font-size: 2.5em;
   }
 
-  .home header p, .welcome p, .signature p {
+  .home header p,
+  .welcome p,
+  .signature p {
     font-size: 1em;
   }
 }
