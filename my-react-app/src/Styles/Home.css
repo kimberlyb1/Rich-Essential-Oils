@@ -1,19 +1,55 @@
-home {
-  text-align: center;
-  padding: 50px;
-  background-image: url('../images/image.png'); /* Ensure the correct path */
+/* src/styles/Home.css */
+.home {
+  height: 100vh; /* Full viewport height */
+  background-image: url('../images/image.png'); /* Ensure correct path */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content evenly */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  color: #2E4A2C; /* Earthy green */
+  padding: 20px;
+}
+
+.home header h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+.home header p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-style: italic; /* Add a softer feel */
+}
+
+.welcome p, .signature p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.signature p {
+  font-style: italic;
   color: #A67B5B; /* Earthy brown */
 }
 
-.home h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #2E4A2C; /* Earthy green */
+footer {
+  margin-top: 20px;
+  color: #A67B5B; /* Earthy brown */
+  font-size: 0.9em;
+  opacity: 0.8; /* Slight transparency for subtle effect */
 }
 
-.home p {
-  font-size: 1.5em;
-  color: #2E4A2C; /* Earthy green */
+@media (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .home header h1 {
+    font-size: 2.5em;
+  }
+
+  .home header p, .welcome p, .signature p {
+    font-size: 1em;
+  }
 }
