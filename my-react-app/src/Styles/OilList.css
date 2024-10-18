@@ -63,7 +63,7 @@
   color: black;                      /* Earthy brown for list items */
 }
 
-/* Optional: Additional styling for a potential OilBar component */
+/* Optional: Additional styling for a potential oil bar component */
 .oil-bar {
   display: flex;                     /* Enables Flexbox layout */
   flex-direction: row;              /* Ensures components are in a row */
