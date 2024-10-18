@@ -9,7 +9,7 @@ const OilList = () => {
     <div className="oil-list">
       {oils.map((oil) => (
         <ProductCard
-          key={oil.name} // Use a unique key for each item
+          key={oil.name} // Change this to `oil.id` if your oil objects have unique IDs
           oil={oil} // Pass the entire oil object to the ProductCard
         />
       ))}
