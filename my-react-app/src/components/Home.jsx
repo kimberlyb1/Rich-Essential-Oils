@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/Home.css'; // Import CSS for styling
 import { Carousel } from 'react-responsive-carousel'; // Import Carousel
-import image from '../components/images/image.png'; // Ensure the correct image path
+import image from '../images/image.png'; // Ensure the correct image path
 import ChamomileImage from '../images/Chamomile.png';
 import RosemaryImage from '../images/Rosemary.png';
 import LemonImage from '../images/Lemon.png';
