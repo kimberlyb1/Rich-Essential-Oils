@@ -269,7 +269,7 @@ import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import FadingImage from './images/'; // Assuming this is a component you've created
+import FadingImage from './images/oilimage.jpg'; // Assuming this is a component you've created
 import './Styles/App.css';
 import './Styles/OilList.css';
 
