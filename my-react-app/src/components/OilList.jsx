@@ -1,7 +1,7 @@
 // src/components/OilList.jsx
 import React from 'react';
 import ProductCard from './ProductCard';
-import './Styles/OilList.css';
+import '../Styles/OilList.css';
 
 const oils = [
   {
