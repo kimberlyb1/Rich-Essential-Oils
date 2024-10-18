@@ -1,5 +1,6 @@
 /* src/Styles/OilList.css */
 
+/* Container for the list of oils */
 .oil-list {
   display: flex;                      /* Flexbox layout for items */
   flex-wrap: wrap;                   /* Allow items to wrap onto new lines */
@@ -9,8 +10,9 @@
   background-color: #E6E8E6;         /* Light, earthy background */
 }
 
+/* Individual oil item styling */
 .oil-item {
-  background-color: #8F9779;         /* Earthy green */
+  background-color: #8F9779;         /* Earthy green background */
   color: black;                      /* Earthy brown text */
   padding: 20px;                     /* Padding inside the item */
   border-radius: 10px;               /* Rounded corners */
@@ -21,10 +23,12 @@
   border: 2px solid #A67B5B;         /* Earthy brown border */
 }
 
+/* Hover effect for oil items */
 .oil-item:hover {
   transform: scale(1.05);            /* Scale effect on hover */
 }
 
+/* Styling for oil images */
 .oil-image {
   max-width: 100%;                   /* Ensure image fits within item */
   height: 170px;                     /* Fixed height for images */
@@ -33,23 +37,27 @@
   border: 2px solid #2E4A2C;         /* Earthy green border */
 }
 
+/* Heading style within oil items */
 .oil-item h3 {
   margin: 10px 0 5px;                /* Margin around the heading */
   font-size: 1.5em;                  /* Font size for headings */
   color: #2E4A2C;                    /* Earthy green for headings */
 }
 
+/* Paragraph style within oil items */
 .oil-item p {
   font-size: 1em;                    /* Font size for paragraph */
   color: #2E4A2C;                    /* Earthy green for paragraph */
 }
 
+/* Unordered list styling within oil items */
 .oil-item ul {
   list-style: none;                  /* Remove default list styles */
   padding: 0;                        /* Remove padding */
   margin-top: 10px;                  /* Space above the list */
 }
 
+/* List item styling */
 .oil-item li {
   font-size: 0.9em;                  /* Font size for list items */
   color: black;                      /* Earthy brown for list items */
