@@ -269,7 +269,7 @@ import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import FadingImage from './images/oilImage.jpg'; // Assuming this is a component you've created
+import oilImage from './images/oilImage.jpg'; // Ensure this path is correct based on the file location
 import './Styles/App.css';
 import './Styles/OilList.css';
 
@@ -310,7 +310,10 @@ const AppWithRouter = () => {
                     <p>Discover the Benefits of Natural Essential Oils</p>
                     <Navbar />
                     <SearchBar />
-                    <FadingImage images={['image1.jpg', 'image2.jpg', 'image3.jpg']} />
+                    {/* Display the oil image */}
+                    <div className="image-container">
+                        <img src={oilImage} alt="Oil" className="fading-image" />
+                    </div>
                 </header>
                 
                 <main>
@@ -342,3 +345,4 @@ const AppWithRouter = () => {
 };
 
 export default AppWithRouter;
+y
