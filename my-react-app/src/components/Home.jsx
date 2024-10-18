@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/Home.css'; // Import CSS for styling
 import { Carousel } from 'react-responsive-carousel'; // Import Carousel
-import natureImage from '../images/nature.png'; // Ensure the correct image path
+import natureImage from '../images/image.png'; // Ensure the correct image path
 import ChamomileImage from '../images/Chamomile.png';
 import RosemaryImage from '../images/Rosemary.png';
 import LemonImage from '../images/Lemon.png';
@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <div 
       className="home" 
-      style={{ backgroundImage: `url(${natureImage})` }} 
+      style={{ backgroundImage: `url(${image.png})` }} 
     >
       <header>
         <h1 className="main-title">Rich Essential Oils</h1>
