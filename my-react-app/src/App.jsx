@@ -269,80 +269,86 @@ import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import oilImage from './images/oilImage.jpg'; // Ensure this path is correct based on the file location
+import oilImage from './images/oilImage.jpg'; // Ensure this path is correct
 import './Styles/App.css';
 import './Styles/OilList.css';
 
 const AppWithRouter = () => {
-    const [oils, setOils] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
+  const [oils, setOils] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
-    // Fetch oils data when the component mounts
-    useEffect(() => {
-        fetch('/Rich.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                setOils(data);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error('Error fetching oils:', error);
-                setLoading(false);
-            });
-    }, []);
+  // Fetch oils data when the component mounts
+  useEffect(() => {
+    fetch('/Rich.json') // Accessing from public folder
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setOils(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching oils:', error);
+        setLoading(false);
+      });
+  }, []);
 
-    // Initialize AOS for animations
-    useEffect(() => {
-        AOS.init({ duration: 1200 });
-    }, []);
+  // Initialize AOS for animations
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
 
-    return (
-        <div className="App">
-            <Router>
-                <header className="app-header">
-                    <h1>Rich Essential Oils</h1>
-                    <p>Discover the Benefits of Natural Essential Oils</p>
-                    <Navbar />
-                    <SearchBar />
-                    {/* Display the oil image */}
-                    <div className="image-container">
-                        <img src={oilImage} alt="Oil" className="fading-image" />
-                    </div>
-                </header>
-                
-                <main>
-                    <Routes>
-                        <Route path="/" element={<Intro />} />
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/oils" element={
-                            loading ? (
-                                <p>Loading oils...</p>
-                            ) : (
-                                <OilList oils={oils} onClick={(oil) => navigate(`/product-details/${oil.id}`)} />
-                            )
-                        } />
-                        <Route path="/rosemary" element={<Rosemary />} />
-                        <Route path="/lemon" element={<Lemon />} />
-                        <Route path="/ylang-ylang" element={<YlangYlang />} />
-                        <Route path="/clary-sage" element={<ClarySage />} />
-                        <Route path="/chamomile" element={<Chamomile />} />
-                        <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
-                    </Routes>
-                </main>
-                
-                <footer className="app-footer">
-                    <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
-                </footer>
-            </Router>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Router>
+        <header className="app-header">
+          <h1>Rich Essential Oils</h1>
+          <p>Discover the Benefits of Natural Essential Oils</p>
+          <Navbar />
+          <SearchBar />
+
+          {/* Display the oil image */}
+          <div className="image-container">
+            <img src={oilImage} alt="Oil" className="fading-image" />
+          </div>
+        </header>
+
+        <main>
+          <Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/home" element={<Home />} />
+            <Route
+              path="/oils"
+              element={
+                loading ? (
+                  <p>Loading oils...</p>
+                ) : (
+                  <OilList
+                    oils={oils}
+                    onClick={(oil) => navigate(`/product-details/${oil.name.toLowerCase()}`)}
+                  />
+                )
+              }
+            />
+            <Route path="/rosemary" element={<Rosemary />} />
+            <Route path="/lemon" element={<Lemon />} />
+            <Route path="/ylang-ylang" element={<YlangYlang />} />
+            <Route path="/clary-sage" element={<ClarySage />} />
+            <Route path="/chamomile" element={<Chamomile />} />
+            <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
+          </Routes>
+        </main>
+
+        <footer className="app-footer">
+          <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
+        </footer>
+      </Router>
+    </div>
+  );
 };
 
 export default AppWithRouter;
-y
