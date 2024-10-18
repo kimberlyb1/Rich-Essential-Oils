@@ -291,6 +291,7 @@ const AppWithRouter = () => {
       })
       .catch(error => {
         console.error('Error fetching oils:', error);
+        alert('Failed to load oils data. Please try again later.');
         setLoading(false);
       });
   }, []);
@@ -325,10 +326,14 @@ const AppWithRouter = () => {
                 loading ? (
                   <p>Loading oils...</p>
                 ) : (
-                  <OilList
-                    oils={oils}
-                    onClick={(oil) => navigate(`/product-details/${oil.name.toLowerCase()}`)}
-                  />
+                  !loading && oils.length === 0 ? (
+                    <p>No oils available at the moment.</p>
+                  ) : (
+                    <OilList
+                      oils={oils}
+                      onClick={(oil) => navigate(`/product-details/${oil.name.toLowerCase()}`)}
+                    />
+                  )
                 )
               }
             />
@@ -350,3 +355,4 @@ const AppWithRouter = () => {
 };
 
 export default AppWithRouter;
+
