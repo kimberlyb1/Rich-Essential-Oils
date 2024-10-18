@@ -256,11 +256,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
+import 'aos/dist/aos.css'; // AOS styles
 import Intro from './components/Intro';
 import Home from './components/Home';
 import OilList from './components/OilList';
-import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
 import Chamomile from './components/Chamomile';
 import Rosemary from './components/Rosemary';
@@ -269,18 +268,17 @@ import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import oilImage from './images/oilImage.jpg'; // Ensure this path is correct
 import './Styles/App.css';
-import './Styles/OilList.css';
+import './Styles/OilList.css'; 
 
 const AppWithRouter = () => {
   const [oils, setOils] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Fetch oils data when the component mounts
+  // Fetch oils data when component mounts
   useEffect(() => {
-    fetch('/Rich.json') // Accessing from public folder
+    fetch(`${process.env.PUBLIC_URL}/Rich.json`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -297,7 +295,7 @@ const AppWithRouter = () => {
       });
   }, []);
 
-  // Initialize AOS for animations
+  // Initialize AOS animations
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
@@ -311,9 +309,9 @@ const AppWithRouter = () => {
           <Navbar />
           <SearchBar />
 
-          {/* Display the oil image */}
+          {/* Display the oil image from the public folder */}
           <div className="image-container">
-            <img src={oilImage} alt="Oil" className="fading-image" />
+            <img src="/images/oilImage.jpg" alt="Oil" className="fading-image" />
           </div>
         </header>
 
