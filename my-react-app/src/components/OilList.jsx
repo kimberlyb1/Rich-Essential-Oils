@@ -1,6 +1,6 @@
 // src/components/OilList.jsx
 import React from 'react';
-import './OilList.css'; // Make sure this CSS file exists.
+import './Styles/OilList.css'; // Make sure this CSS file exists.
 
 // Optional import: If you have an OilCard component
 import OilCard from './OilCard'; // Comment out if not using
