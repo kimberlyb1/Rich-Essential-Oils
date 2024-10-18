@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite preview"  // This line was added from the second snippet.
   },
   "dependencies": {
     "aos": "^2.3.4",
