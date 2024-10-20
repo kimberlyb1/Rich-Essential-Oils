@@ -1,3 +1,4 @@
+// SearchBar.jsx
 import React from 'react';
 
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
@@ -11,4 +12,4 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
   );
 };
 
-export default SearchBar;
+export default SearchBar; // Ensure default export
