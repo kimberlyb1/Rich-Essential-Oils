@@ -271,7 +271,7 @@ import SearchBar from './components/SearchBar';
 import './Styles/App.css';
 import './Styles/OilList.css';
 
-const AppWithRouter = () => {
+const App = () => {
   const [oils, setOils] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -348,11 +348,5 @@ const AppWithRouter = () => {
     </div>
   );
 };
-
-const App = () => (
-  <Router>
-    <AppWithRouter />
-  </Router>
-);
 
 export default App;
