@@ -1,20 +1,24 @@
-import React from 'react'; // Import React
-import ReactDOM from 'react-dom/client'; // Import ReactDOM for rendering
-import App from './App'; // Adjust this import based on your file structure
-import './index.css'; // Your global CSS file
+// src/index.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import AppWithRouter from './AppWithRouter'; // Import your main App component
+import './Styles/index.css'; // Import global CSS
 
-// Import Carousel and AOS styles
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Carousel CSS
-import 'aos/dist/aos.css'; // AOS CSS
+// Import styles for Carousel and AOS animations
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Carousel styles
+import 'aos/dist/aos.css'; // AOS animation styles
+
 import AOS from 'aos'; // Import AOS library
 
-// Initialize AOS
+// Initialize AOS for animations with settings
 AOS.init({ duration: 1000, easing: 'ease-in-out' });
 
-// Render the App component into the root element
+// Create the root element for rendering
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Render the app within React.StrictMode
 root.render(
   <React.StrictMode>
-    <App />
+    <AppWithRouter /> {/* Ensure AppWithRouter is used correctly */}
   </React.StrictMode>
 );

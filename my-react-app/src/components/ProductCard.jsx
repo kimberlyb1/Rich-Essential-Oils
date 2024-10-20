@@ -1,7 +1,7 @@
 // src/components/ProductCard.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import './Styles/ProductCard.css'; // Ensure the path to CSS is correct
+import '../Styles/ProductCard.css'; // Ensure the path to CSS is correct
 
 const ProductCard = ({ oil }) => {
   return (
