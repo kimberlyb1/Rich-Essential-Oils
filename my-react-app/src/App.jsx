@@ -278,7 +278,7 @@ const App = () => {
 
   // Fetch oils data when component mounts
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/Rich.json`)
+    fetch(`${import.meta.env.PUBLIC_URL}/Rich.json`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
