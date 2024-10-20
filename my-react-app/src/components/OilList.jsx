@@ -6,10 +6,10 @@ import '../Styles/OilList.css'; // Import CSS for styling
 
 const OilList = () => {
   return (
-    <div className="oil-list">
+    <div className="oil-list"> {/* Ensure oil-list class is applied */}
       {oils.map((oil) => (
         <ProductCard
-          key={oil.id} // Change this to `oil.id` if your oil objects have unique IDs
+          key={oil.id} // Use a unique key for each oil item
           oil={oil} // Pass the entire oil object to the ProductCard
         />
       ))}
