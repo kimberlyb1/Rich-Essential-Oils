@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rich Essential Oils</title>
-
-    <!-- Link to CSS file -->
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="/src/Styles/index.css" />
-
     <!-- AOS Animation Styles -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-    <!-- React Fallback for Development -->
-    <script defer="defer" src="/src/main.jsx"></script>
   </head>
   <body>
     <div id="root"></div> <!-- This is where React will render your App -->
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- React Fallback for Development -->
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
