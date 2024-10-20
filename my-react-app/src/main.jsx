@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
 import './Styles/index.css';
 import 'aos/dist/aos.css';
-import AOS from 'aos';
 
-// Initialize AOS
+import AOS from 'aos';
 AOS.init();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
