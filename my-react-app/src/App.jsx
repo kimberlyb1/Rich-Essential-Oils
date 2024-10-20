@@ -269,7 +269,7 @@ import ClarySage from './components/ClarySage';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import './Styles/App.css';
-import './Styles/OilList.css'; 
+import './Styles/OilList.css';
 
 const AppWithRouter = () => {
   const [oils, setOils] = useState([]);
@@ -303,56 +303,56 @@ const AppWithRouter = () => {
 
   return (
     <div className="App">
-      <Router>
-        <header className="app-header">
-          <h1>Rich Essential Oils</h1>
-          <p>Discover the Benefits of Natural Essential Oils</p>
-          <Navbar />
-          <SearchBar />
-
-          {/* Display the oil image from the public folder */}
-          <div className="image-container">
-            <img src="/images/oilImage.jpg" alt="Oil" className="fading-image" />
-          </div>
-        </header>
-
-        <main>
-          <Routes>
-            <Route path="/" element={<Intro />} />
-            <Route path="/home" element={<Home />} />
-            <Route
-              path="/oils"
-              element={
-                loading ? (
-                  <p>Loading oils...</p>
+      <header className="app-header">
+        <h1>Rich Essential Oils</h1>
+        <p>Discover the Benefits of Natural Essential Oils</p>
+        <Navbar />
+        <SearchBar />
+        {/* Display the oil image from the public folder */}
+        <div className="image-container">
+          <img src="/images/oilImage.jpg" alt="Oil" className="fading-image" />
+        </div>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/home" element={<Home />} />
+          <Route
+            path="/oils"
+            element={
+              loading ? (
+                <p>Loading oils...</p>
+              ) : (
+                oils.length === 0 ? (
+                  <p>No oils available at the moment.</p>
                 ) : (
-                  !loading && oils.length === 0 ? (
-                    <p>No oils available at the moment.</p>
-                  ) : (
-                    <OilList
-                      oils={oils}
-                      onClick={(oil) => navigate(`/product-details/${oil.name.toLowerCase()}`)}
-                    />
-                  )
+                  <OilList
+                    oils={oils}
+                    onClick={(oil) => navigate(`/product-details/${oil.name.toLowerCase()}`)}
+                  />
                 )
-              }
-            />
-            <Route path="/rosemary" element={<Rosemary />} />
-            <Route path="/lemon" element={<Lemon />} />
-            <Route path="/ylang-ylang" element={<YlangYlang />} />
-            <Route path="/clary-sage" element={<ClarySage />} />
-            <Route path="/chamomile" element={<Chamomile />} />
-            <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
-          </Routes>
-        </main>
-
-        <footer className="app-footer">
-          <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
-        </footer>
-      </Router>
+              )
+            }
+          />
+          <Route path="/rosemary" element={<Rosemary />} />
+          <Route path="/lemon" element={<Lemon />} />
+          <Route path="/ylang-ylang" element={<YlangYlang />} />
+          <Route path="/clary-sage" element={<ClarySage />} />
+          <Route path="/chamomile" element={<Chamomile />} />
+          <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
+        </Routes>
+      </main>
+      <footer className="app-footer">
+        <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
 
-export default AppWithRouter;
+const App = () => (
+  <Router>
+    <AppWithRouter />
+  </Router>
+);
 
+export default App;
