@@ -7,22 +7,19 @@ body, html {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
 .app {
   text-align: center;
 }
 
 /* Header Styles */
-.header, .app-header { 
-  background-image: url('./images/image.png');  /* Adjust path based on image location */
+.header, .app-header {
+  background-image: url('/images/oilImage.jpg'); /* Adjust path based on image location */
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .app-header {
   min-height: 100vh;
   display: flex;
@@ -33,7 +30,6 @@ code {
   color: white;
   padding: 20px;
 }
-
 .app-header h1 {
   margin: 0;
 }
@@ -54,21 +50,26 @@ code {
 }
 
 /* Testimonials and Blog Styles */
-.testimonials-list, 
-.blog-list {
+.testimonials-list, .blog-list {
   display: flex; /* Added to enable flex behavior */
   flex-direction: row;
 }
 
 /* Responsive layout for smaller screens */
 @media (max-width: 768px) {
-  .testimonials-list, 
-  .blog-list {
+  .testimonials-list, .blog-list {
     flex-direction: column;
   }
-
-  .blog-card, 
-  .testimonial {
+  .blog-card, .testimonial {
     width: 90%; /* Ensures cards take up more width on smaller screens */
   }
+}
+
+/* App.css */
+.image-container {
+  background-image: url('/images/oilImage.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
 }
