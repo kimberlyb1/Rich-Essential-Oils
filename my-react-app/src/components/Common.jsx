@@ -1,5 +1,5 @@
 import React from 'react';
-import './Common.css'; // Import the common styles
+import '../Styles/Common.css'; // Import the common styles
 
 const Common = ({ title, content }) => {
   return (
