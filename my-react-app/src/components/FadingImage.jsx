@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Styles/FadingImage.css'; // Create a CSS file for styles
+import './Styles/OilImage.css'; // Create a CSS file for styles
 
 const FadingImage = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
