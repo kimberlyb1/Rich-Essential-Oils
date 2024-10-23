@@ -21,45 +21,54 @@ import Hero from './components/Hero';
 import ScrollToTop from './components/ScrollToTop';
 import Sidebar from './components/Sidebar';
 import Testimonials from './components/Testimonials';
-import './Styles/App.css'; // App CSS
+import './Styles/App.css'; // Main CSS
 
 const App = () => {
   const [oils, setOils] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  // Fetch oils data on component mount
   useEffect(() => {
     fetch('/Rich.json')
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch oils data');
         }
         return response.json();
       })
-      .then(data => {
+      .then((data) => {
         setOils(data);
         setLoading(false);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching oils:', error);
         alert('Failed to load oils data. Please try again later.');
         setLoading(false);
       });
   }, []);
 
+  // Initialize AOS animations on component mount
   useEffect(() => {
     AOS.init({ duration: 1200, easing: 'ease-in-out' });
   }, []);
 
   return (
     <div className="App">
+      {/* Header Section */}
       <header className="app-header">
         <h1>Rich Essential Oils</h1>
         <p>Discover the Benefits of Natural Essential Oils</p>
         <Navbar />
         <SearchBar />
-        <img src="/images/OilImage.jpg" alt="Oil" className="fading-image" /> {/* Use image directly */}
+        <img
+          src="/images/OilImage.jpg"
+          alt="Oil"
+          className="fading-image"
+        /> {/* Displaying the image */}
       </header>
+
+      {/* Main Section with Routes */}
       <main>
         <Routes>
           <Route path="/" element={<Intro />} />
@@ -72,7 +81,12 @@ const App = () => {
               ) : oils.length === 0 ? (
                 <p>No oils available at the moment.</p>
               ) : (
-                <OilList oils={oils} onClick={oil => navigate(`/product-details/${oil.name.toLowerCase()}`)} />
+                <OilList
+                  oils={oils}
+                  onClick={(oil) =>
+                    navigate(`/product-details/${oil.name.toLowerCase()}`)
+                  }
+                />
               )
             }
           />
@@ -88,9 +102,14 @@ const App = () => {
           <Route path="/scroll-to-top" element={<ScrollToTop />} />
           <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
+          <Route
+            path="/product-details/:id"
+            element={<ProductDetails oils={oils} />}
+          />
         </Routes>
       </main>
+
+      {/* Footer Section */}
       <footer className="app-footer">
         <p>&copy; 2024 Rich Essential Oils. All rights reserved.</p>
       </footer>
