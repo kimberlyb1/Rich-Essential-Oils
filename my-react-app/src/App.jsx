@@ -17,7 +17,6 @@ import ClarySage from './components/ClarySage';
 import Blog from './components/Blog';
 import Common from './components/Common';
 import Data from './components/Data';
-import FadingImage from '../public/images/OilImage.jpg'; // Ensure the correct path
 import Hero from './components/Hero';
 import ScrollToTop from './components/ScrollToTop';
 import Sidebar from './components/Sidebar';
@@ -59,6 +58,7 @@ const App = () => {
         <p>Discover the Benefits of Natural Essential Oils</p>
         <Navbar />
         <SearchBar />
+        <img src="/images/OilImage.jpg" alt="Oil" className="fading-image" /> {/* Use image directly */}
       </header>
       <main>
         <Routes>
@@ -84,7 +84,6 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/common" element={<Common />} />
           <Route path="/data" element={<Data />} />
-          <Route path="/fading-image" element={<FadingImage />} />
           <Route path="/hero" element={<Hero />} />
           <Route path="/scroll-to-top" element={<ScrollToTop />} />
           <Route path="/sidebar" element={<Sidebar />} />
