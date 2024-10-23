@@ -90,11 +90,11 @@ const App = () => {
               )
             }
           />
-          <Route path="/rosemary" element={<Rosemary />} />
-          <Route path="/lemon" element={<Lemon />} />
-          <Route path="/ylang-ylang" element={<YlangYlang />} />
-          <Route path="/clary-sage" element={<ClarySage />} />
-          <Route path="/chamomile" element={<Chamomile />} />
+          <Route path="/Rosemary" element={<Rosemary />} />
+          <Route path="/Lemon" element={<Lemon />} />
+          <Route path="/ylangylang" element={<YlangYlang />} />
+          <Route path="/ClarySage" element={<ClarySage />} />
+          <Route path="/Chamomile" element={<Chamomile />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/common" element={<Common />} />
           <Route path="/data" element={<Data />} />
