@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import AppWithRouter from './AppWithRouter'; // Import your main App component
-import './Styles/index.css'; // Import global CSS
+import '../Styles/index.css'; // Import global CSS
 
 // Import styles for Carousel and AOS animations
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Carousel styles
