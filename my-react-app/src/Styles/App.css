@@ -16,7 +16,7 @@ code {
 
 /* Header Styles */
 .header, .app-header {
-  background-image: url('/images/oilImage.jpg'); /* Adjust path based on image location */
+  background-image: url('/images/OilImage.jpg'); /* Adjust path based on image location */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -67,7 +67,7 @@ code {
 
 /* App.css */
 .image-container {
-  background-image: url('/images/oilImage.jpg');
+  background-image: url('/images/OilImage.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
