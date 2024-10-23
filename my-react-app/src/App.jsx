@@ -17,7 +17,7 @@ import ClarySage from './components/ClarySage';
 import Blog from './components/Blog'; // New Component
 import Common from './components/Common'; // New Component
 import Data from './components/Data'; // New Component
-import FadingImage from './components/OilImage.jpg'; // New Component
+import FadingImage from './Images//OilImage.jpg'; // New Component
 import Hero from './components/Hero'; // New Component
 import ScrollToTop from './components/ScrollToTop'; // New Component
 import Sidebar from './components/Sidebar'; // New Component
