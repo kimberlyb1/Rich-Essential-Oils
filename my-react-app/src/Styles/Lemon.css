@@ -1,0 +1,61 @@
+/* Lemon.css */
+
+.oil-card {
+    background-color: #f5f5dc; /* Beige-like background for an earthy feel */
+    border: 2px solid #6b4226; /* Brown border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    color: #4b5320; /* Earthy green text color */
+  }
+  
+  .oil-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    color: #6b4226; /* Brown heading color */
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #4b5320; /* Earthy green text color */
+    margin-bottom: 15px;
+  }
+  
+  button {
+    background-color: #4b5320; /* Earthy green button */
+    color: #f5f5dc; /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6b4226; /* Brown on hover */
+  }
+  
+  h3 {
+    color: #6b4226; /* Brown subheading color */
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    color: #4b5320; /* Earthy green text color */
+    margin: 5px 0;
+  }
+  
