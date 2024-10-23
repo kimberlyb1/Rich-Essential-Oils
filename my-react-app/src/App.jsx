@@ -14,14 +14,14 @@ import Rosemary from './components/Rosemary';
 import Lemon from './components/Lemon';
 import YlangYlang from './components/YlangYlang';
 import ClarySage from './components/ClarySage';
-import Blog from './components/Blog'; // New Component
-import Common from './components/Common'; // New Component
-import Data from './components/Data'; // New Component
-import FadingImage from './images//OilImage.jpg'; // New Component
-import Hero from './components/Hero'; // New Component
-import ScrollToTop from './components/ScrollToTop'; // New Component
-import Sidebar from './components/Sidebar'; // New Component
-import Testimonials from './components/Testimonials'; // New Component
+import Blog from './components/Blog';
+import Common from './components/Common';
+import Data from './components/Data';
+import FadingImage from '../public/images/OilImage.jpg'; // Ensure the correct path
+import Hero from './components/Hero';
+import ScrollToTop from './components/ScrollToTop';
+import Sidebar from './components/Sidebar';
+import Testimonials from './components/Testimonials';
 import './Styles/App.css'; // App CSS
 
 const App = () => {
@@ -81,14 +81,14 @@ const App = () => {
           <Route path="/ylang-ylang" element={<YlangYlang />} />
           <Route path="/clary-sage" element={<ClarySage />} />
           <Route path="/chamomile" element={<Chamomile />} />
-          <Route path="/blog" element={<Blog />} /> {/* New Route */}
-          <Route path="/common" element={<Common />} /> {/* New Route */}
-          <Route path="/data" element={<Data />} /> {/* New Route */}
-          <Route path="/fading-image" element={<FadingImage />} /> {/* New Route */}
-          <Route path="/hero" element={<Hero />} /> {/* New Route */}
-          <Route path="/scroll-to-top" element={<ScrollToTop />} /> {/* New Route */}
-          <Route path="/sidebar" element={<Sidebar />} /> {/* New Route */}
-          <Route path="/testimonials" element={<Testimonials />} /> {/* New Route */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/common" element={<Common />} />
+          <Route path="/data" element={<Data />} />
+          <Route path="/fading-image" element={<FadingImage />} />
+          <Route path="/hero" element={<Hero />} />
+          <Route path="/scroll-to-top" element={<ScrollToTop />} />
+          <Route path="/sidebar" element={<Sidebar />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/product-details/:id" element={<ProductDetails oils={oils} />} />
         </Routes>
       </main>
