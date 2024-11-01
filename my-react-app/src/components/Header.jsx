@@ -1,14 +1,12 @@
-// src/components/layout/Header.jsx
-import React, { useEffect, useState } from 'react'; 
-import oilImage from '..image/oilimage.jpg'; // Ensure this path is correct
+import React, { useEffect, useState } from 'react';
 import '../Styles/Header.css'; // Ensure correct path to CSS
 
 const Header = () => {
-  const [isImageActive, setImageActive] = useState(false);
+  const [isImageActive, setIsImageActive] = useState(false);
 
   // Apply the 'active' class after the component mounts
   useEffect(() => {
-    const timer = setTimeout(() => setImageActive(true), 100); // Delay to trigger animation
+    const timer = setTimeout(() => setIsImageActive(true), 100); // Delay to trigger animation
     return () => clearTimeout(timer); // Cleanup the timeout
   }, []);
 
@@ -16,13 +14,12 @@ const Header = () => {
     <header className="app-header">
       <h1>Rich Essential Oils</h1>
       <p>Discover the Benefits of Natural Essential Oils</p>
-
       <div className="image-container">
         {/* Conditionally apply the 'active' class */}
         <img 
-          src={oilImage} 
-          alt="Oil" 
-          className={`fading-image ${isImageActive ? 'active' : ''}`} 
+          src="/images/image.png" // Direct reference to the public folder path
+          alt="Oil"
+          className={`fading-image ${isImageActive ? 'active' : ''}`}
         />
       </div>
     </header>
