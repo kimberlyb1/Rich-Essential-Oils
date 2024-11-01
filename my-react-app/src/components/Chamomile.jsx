@@ -22,7 +22,7 @@ const Chamomile = () => {
   const shortBenefits = fullBenefits.slice(0, 3);
   return (
     <div className="oil-card">
-      <img src={chamomileImage} alt="Chamomile Essential Oil" className="oil-image" />
+      <img src={ChamomileImage} alt="Chamomile Essential Oil" className="oil-image" />
       <h2>Chamomile Essential Oil</h2>
       {/* Description text with See More */}
       <p>{isExpanded ? fullDescription : `${shortDescription}...`}</p>

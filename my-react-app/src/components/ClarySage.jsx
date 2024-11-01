@@ -25,7 +25,7 @@ const ClarySage = () => {
 
   return (
     <div className="oil-card">
-      <img src={clarySageImage} alt="Clary Sage Essential Oil" className="oil-image" />
+      <img src={ClarySageImage} alt="Clary Sage Essential Oil" className="oil-image" />
       <h2>Clary Sage Essential Oil</h2>
       {/* Description text with See More */}
       <p>{isExpanded ? fullDescription : `${shortDescription}...`}</p>
