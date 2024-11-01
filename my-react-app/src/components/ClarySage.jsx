@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import clarySageImage from '../images/Clary-Sage.jpg'; // Correct image import
+import ClarySageImage from '../images/ClarySage.jpg'; // Correct image import
 import '../styles/ClarySage.css'; // Correct CSS import
 
 const ClarySage = () => {
