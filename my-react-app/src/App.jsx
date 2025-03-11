@@ -30,22 +30,19 @@ const App = () => {
 
   // Fetch oils data on component mount
   useEffect(() => {
-    fetch('/Rich.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch oils data');
-        }
-        return response.json();
-      })
-      .then((data) => {
+    async function loadOils() {
+      try {
+        const oilList = await fetch("../public/Rich.json");
+        const data = await oilList.json();
         setOils(data);
         setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching oils:', error);
+      } catch (err) {
+        console.error('Error fetching oils:', err);
         alert('Failed to load oils data. Please try again later.');
         setLoading(false);
-      });
+      }
+    }
+    loadOils();
   }, []);
 
   // Initialize AOS animations on component mount
@@ -55,6 +52,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {console.log("oils", oils)}
       {/* Header Section */}
       <header className="app-header">
         <h1>Rich Essential Oils</h1>
@@ -97,7 +95,7 @@ const App = () => {
           <Route path="/Chamomile" element={<Chamomile />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/common" element={<Common />} />
-          <Route path="/data" element={<Data />} />
+          {/* <Route path="/data" element={<Data />} /> */}
           <Route path="/hero" element={<Hero />} />
           <Route path="/scroll-to-top" element={<ScrollToTop />} />
           <Route path="/sidebar" element={<Sidebar />} />
